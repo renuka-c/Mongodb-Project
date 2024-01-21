@@ -1,0 +1,37 @@
+Delete Documents 
+         MongoDB, the term "delete" refers to the operation of removing one or more documents from a collection. The delete operation is used to eliminate data from the database based on specified criteria.
+
+                              db.employess.insertMany([
+                               {
+                                  name : "Renuka",
+                                 age : 23,
+                                empId  : 2255901,
+                                Detalis : {email : "renuka@gmail.com",PhoneNumber: 91829},
+                                  rank : 1,
+                                    },
+                               {
+                                  name : "charan",
+                                 age : 27,
+                                empId  : 2255986,
+                                Detalis : {email : "charan@gmail.com",PhoneNumber: 91876},
+				rank    : 1
+                                    },
+                                 {
+                                  name : "naga lakshmi",
+                                 age : 28,
+                                empId  : 2255901,
+                                Detalis : {email : "nagalakshmi@gmail.com",PhoneNumber: 91923},
+				rank : 2
+                                    }
+                            ]);
+
+Delete only one Document:
+                       To delete at most a single document that matches a specified filter even though multiple documents may match the specified filter.
+                    
+                       db.employes.deleteOne({name : "Renuka"});
+
+Delete All Documents :
+                   Delete all documents that match a condition.
+
+                       db.employes.deleteMany({rank : 1});
+              
