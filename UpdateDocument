@@ -1,0 +1,55 @@
+Update Documents:
+                  MongoDB, the term "update" refers to the process of modifying existing documents in a collection. The update operation allows you to change the values of one or more fields within a document or to apply more complex modifications to the data.
+
+  Update Documents in a Collection :
+                                 To update a document, MongoDB provides update operators such as $set to modify field values.
+
+                          Example : 
+                            db.employess.insertMany([
+                               {
+                                  name : "Renuka",
+                                 age : 23,
+                                empId  : 2255901,
+                                Detalis : {email : "renuka@gmail.com",PhoneNumber: 91829},
+                                 rank : 2
+                                    },
+                               {
+                                  name : "charan",
+                                 age : 27,
+                                empId  : 2255986,
+                                Detalis : {email : "charan@gmail.com",PhoneNumber: 91876},
+                                 rank : 1
+                                    },
+                                 {
+                                  name : "naga lakshmi",
+                                 age : 28,
+                                empId  : 2255901,
+                                Detalis : {email : "nagalakshmi@gmail.com",PhoneNumber: 91923},
+                                 rank : 3
+                                    }
+                            ]);
+
+
+Update Single Document:
+                       The Collection.updateOne()method on the inventory collection to update the first document where name equals "Renuka":
+
+                                   db.employes.updateOne(
+                                         {name : "Renuka" },
+                                             {
+                                                $set : {age : 25, PhoneNumber: 91345}
+                                             });
+
+Update Multiple Documents:
+                        The following example uses the Collection.updateMany()method on the inventory collection to update all documents where qty is less than 50:
+                          
+                              db.employes.updateMany(
+                                        { age : {$gt : 23} }           gt : greater than
+                                          {
+                                             $set : {rank : 1}
+                             
+                                           });
+
+Additional Update Methods:
+                           Collection.replaceOne()
+
+                
