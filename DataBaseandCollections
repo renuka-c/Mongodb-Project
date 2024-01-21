@@ -1,1 +1,59 @@
+DataBase :
+     A database in Mongodb is stores data records as documents (specifically BSON documents) which are gathered together in collections. A 
+       database stores one or more collections of documents
+                       
+     A MongoDB server can host multiple databases, each with its own set of collections and documents.To select a database to use, in 
+       mongosh, issue the use <db> statement, as in the following 
+
+                                  Syntax:   use DATABASE_NAME
+                                  Example :  use myDemodatabase
  
+                If we want to get list of all databases.
+
+                                  Syntax : show dbs
+
+                If we want to know current selected database.
+  		 
+                                  Syntax : db
+ 
+
+                To drop/delete the database , this will drop the selected database.
+
+                                  Syntax : db.dropDatabase()
+
+ 
+Collections :
+        A collection is a grouping of MongoDB documents. Documents within a collection can have different fields.
+      
+             Example :
+                     			  {
+         		 			 name : "renuka",
+			  			 age : 23,
+			 		         email : "renuka.1@gmail.com"
+					}
+			
+							Collection
+
+
+                 To create Collection .
+
+                                Syntax : db.createCollection(name)
+                                Example : db.createCollection("Employee");
+
+                 To check Collection list.
+
+                                Syntax : show collectins
+
+                 To drop/delete selected collection.
+         
+                                 Syntax : db.COLLECTION_NAME.drop()
+                 
+                 To rename yor collection :
+          
+                                  Syntax : db.<ciiectn>.renameCollection('collection')
+
+
+ 
+
+
+      
