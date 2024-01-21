@@ -1,1 +1,42 @@
-  Operations
+CURD OPERATIONS :
+
+                 CRUD stands for Create, Read, Update, and Delete, which are the basic operations that can be performed on data in a database or     
+                        storage system.
+
+Create Operations:
+                   Create or insert operations add new documents to a collection. If the collection does not currently exist, insert operations   
+                        will create the collection.
+                            
+                            Example : db.users.insertOne{
+                                                
+                                                          name : "renuka",
+               						  age : 23,
+ 							  email : "renuka@gmail.com"
+                                                         }
+
+Read Operations :
+
+                   Read operations retrieve documents from a collection; i.e. query a collection for documents.
+                    Example :
+                              db.users.find(
+                                   { age:  { $gt : 20} },
+                                    )
+
+Update Operations :
+
+
+                   Update operations modify existing documents in a collection.      
+	           Example : 
+                               db.users.updateOne(
+                                        {productNmae : "Laptop"},
+                                         { $set : {price : 12000}
+                                        )
+
+                     
+Delete Operations:
+                  
+                    Delete operations remove documents from a collection
+                    Example :
+                              db.users.deleteOne({name : "renuka"})
+                    
+							
