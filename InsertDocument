@@ -1,0 +1,49 @@
+ Insert Document :
+           
+ Insert a Single Document:
+
+       Collection.insertOne() inserting a single document into a collection.
+
+          Example :
+                          db.employes.insertOne({
+                                name : "Renuka",
+                                 age : 23,
+                                empId  : 2255901,
+                                Detalis : {email : "renuka@gmail.com",PhoneNumber: 91829}
+                                   });
+
+Insert Multiple Documents :
+
+                             Collection.insertMany can insert multiple    documents into a collection.
+
+              Example : 
+                            db.employess.insertMany([
+                               {
+                                  name : "Renuka",
+                                 age : 23,
+                                empId  : 2255901,
+                                Detalis : {email : "renuka@gmail.com",PhoneNumber: 91829}
+                                    },
+                               {
+                                  name : "charan",
+                                 age : 27,
+                                empId  : 2255986,
+                                Detalis : {email : "charan@gmail.com",PhoneNumber: 91876}
+                                    },
+                                 {
+                                  name : "naga lakshmi",
+                                 age : 28,
+                                empId  : 2255901,
+                                Detalis : {email : "nagalakshmi@gmail.com",PhoneNumber: 91923}
+                                    }
+                            ]);
+
+Additional Insert Methods:
+                       
+               db.collection.updateOne()
+               db.collection.updateMany()
+               db.collection.findAndModify()
+               db.collection.findAndUpdate()
+               db.collection.findAndReplace()
+               db.collection.bulkWrite()
+                                   
